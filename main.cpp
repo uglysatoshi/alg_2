@@ -5,6 +5,7 @@ int main()
     List <Values> list;  // Создание списка хранящего значения класса Values
     int choice; // Переменная для работы со switch
     int temp1; // Переменная для работы с данными типа int для ввода 
+    string temp3; // Переменная для работы с данными типа string для ввода
     string temp2; // Переменная для работы с данными типа string для ввода
     switch_istructions(); 
     do
@@ -34,17 +35,15 @@ int main()
             case 7:
                 cout << "Введите фамилию: "; cin >> temp2;
                 list.FindByUserLastname(temp2);
-                temp2 = "";
                 break;
             case 8:
                 cout << "Введите номер счета: "; cin >> temp1;
                 list.FindByAccountNumber(temp1);
-                temp1 = 0;
                 break;
             case 9:
-                cout << "Введите дату в формате (гггг.мм.дд чч:мм): "; cin >> temp2;
-                list.FindByTime(temp2);
-                temp2 = "";
+                cin.ignore();
+                cout << "Введите дату в формате (гггг.мм.дд чч:мм): "; getline(cin, temp3, '\n');
+                list.FindByTime(temp3);
                 break;
             case 10:
                 list.pop_front();
@@ -55,7 +54,6 @@ int main()
             case 12:
                 cout << "Введите индекс элемента списка: "; cin >> temp1;
                 list.remove_at(temp1);
-                temp1 = 0;
                 break;
             case 13:
                 list.clear();

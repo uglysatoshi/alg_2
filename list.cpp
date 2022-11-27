@@ -312,15 +312,15 @@ void List <T> :: FindByUserLastname(string str)
 
 // Функция поиска по дате
 template <typename T>
-void List <T> :: FindByTime(string t)
+void List <T> :: FindByTime(string str)
 {
     Node <T> *temp = head;
     Values value = temp -> data;
-    time_t t1 = StringToTime(t);
+    time_t t = StringToTime(str);
     while (temp != NULL)
     {
         value = temp -> data;
-        if (value.date == t1)
+        if (value.date == t)
         {
             value.show();
             cout << endl;

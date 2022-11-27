@@ -56,7 +56,7 @@ class List
         List();
         ~List();
 		Values read();
-        void FindByTime(string t);
+        void FindByTime(string str);
         void FindByUserLastname(string str);
         void FindByAccountNumber(int n);
         void SortByUserLastname();
