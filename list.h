@@ -1,6 +1,7 @@
 #ifndef LIST
 #define LIST
 
+// Объявление библиотек
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -10,6 +11,7 @@ using namespace std;
 string TimeToString(time_t t);
 time_t StringToTime(string str);
 
+// Объявление класса Values
 class Values
 {
     public:
@@ -24,13 +26,15 @@ class Values
     Values read();
 };
 
+// Объявление класса Node
 template <class T>
 class Node
 {
     public:
-        Node <T> *pNext;
-        T data;
-        Node(T newData = T(), Node <T> *pNext = nullptr)
+        Node <T> *pNext; // Указатель класа Node на следующий элемент списка
+        T data; // Шаблонная переменная для хранения данных
+        // Конструктор класса Node
+        Node(T newData = T(), Node <T> *pNext = nullptr) 
         {
             data.AccountNumber = newData.AccountNumber;
             data.AccountCode = newData.AccountCode;
@@ -44,7 +48,7 @@ class Node
         Node <T> *head;
 };
 
-
+// Объявление класса List
 template <class T>
 class List
 {
@@ -67,8 +71,8 @@ class List
         void pop_front();
         void push_back(T data);
     private:
-        int Size;
-        Node <T> *head;
+        int Size; // Переменная для расчета размера списка
+        Node <T> *head; // Указатель класса Node на голову списка
 };
 
 #endif

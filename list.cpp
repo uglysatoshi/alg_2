@@ -1,5 +1,6 @@
 #include "list.h"
 
+// Конструктор класса List
 template <typename T>
 List <T> :: List()
 {
@@ -7,12 +8,14 @@ List <T> :: List()
     head = nullptr;
 }
 
+// Деструктор класса List
 template <typename T>
 List <T> :: ~List()
 {
     clear();
 };
 
+// Функция добавления элемента в конец списка
 template <typename T>
 void List <T> :: push_back(T data)
 {
@@ -31,6 +34,7 @@ void List <T> :: push_back(T data)
     Size++;
 }
 
+// Функция удаления элемента из начала списка
 template <typename T>
 void List <T> :: pop_front()
 {
@@ -40,6 +44,7 @@ void List <T> :: pop_front()
     Size --;
 }
 
+// Функция очистки списка
 template <typename T>
 void List <T> :: clear()
 {
@@ -49,6 +54,7 @@ void List <T> :: clear()
     }
 }
 
+// Функция добавления элемента в начало списка
 template <typename T>
 void List <T> :: push_front(T data)
 {
@@ -56,6 +62,7 @@ void List <T> :: push_front(T data)
     Size ++;
 }
 
+// Функция добавления элемента в произвольное место списка
 template <typename T>
 void List <T> :: insert(T data, int index)
 {
@@ -71,6 +78,7 @@ void List <T> :: insert(T data, int index)
     }   
 }
 
+// Функция удаления элемента из произвольного места списка
 template <typename T>
 void List <T> :: remove_at(int index)
 {
@@ -90,12 +98,14 @@ void List <T> :: remove_at(int index)
     }
 }
 
+// Функция удаления последнего элемента списка
 template <typename T>
 void List <T> :: pop_back()
 {
     remove_at(Size - 1);
 }
 
+// Функция конвертирования из string в time_t
 time_t StringToTime(string str)
 {
     string res = "";
@@ -109,6 +119,7 @@ time_t StringToTime(string str)
     return stoll(res);
 }
 
+// Функция конвертирования из time_t в string
 string TimeToString(time_t t)
 {
     string in = to_string(t);
@@ -116,6 +127,7 @@ string TimeToString(time_t t)
     return res; 
 }
 
+// Функция вывода для переменной типа Values
 void Values :: show()
 {
     cout << "Номер счета: " << AccountNumber << endl;
@@ -126,6 +138,7 @@ void Values :: show()
     cout << "Годовой процент начисления: " << DepositRate << endl;
 }
 
+// Функция ввода переменной типа Values
 template <typename T>
 Values List<T> :: read()
 {
@@ -143,6 +156,7 @@ Values List<T> :: read()
     return in;
 }
 
+// Функция вывода списка
 template<typename T>
 void List <T> :: show()
 {
@@ -156,6 +170,7 @@ void List <T> :: show()
     }
 }
 
+// Функция сортировки по дате
 template <typename T>
 void List <T>::SortByDate()
 {
@@ -191,6 +206,7 @@ void List <T>::SortByDate()
   }
 }
 
+// Функция сортировки по номеру счета
 template <typename T>
 void List <T>:: SortByAccountNumber()
 {
@@ -224,6 +240,7 @@ void List <T>:: SortByAccountNumber()
     }
 }
 
+// Функция сортировки по фамилии
 template <typename T>
 void List <T>:: SortByUserLastname()
 {
@@ -257,6 +274,7 @@ void List <T>:: SortByUserLastname()
     }
 }
 
+// Функция поиска по номеру счета
 template <typename T>
 void List <T> :: FindByAccountNumber(int n)
 {
@@ -274,6 +292,7 @@ void List <T> :: FindByAccountNumber(int n)
     }
 }
 
+// Функция поиска по фамилии
 template <typename T>
 void List <T> :: FindByUserLastname(string str)
 {
@@ -291,6 +310,7 @@ void List <T> :: FindByUserLastname(string str)
     }
 }
 
+// Функция поиска по дате
 template <typename T>
 void List <T> :: FindByTime(string t)
 {
@@ -309,6 +329,7 @@ void List <T> :: FindByTime(string t)
     }
 }
 
+// Функция вывода инструкции для работы с меню
 void switch_istructions()
 {
     cout << "1 - Добавить элемент в начало списка" << endl;

@@ -2,11 +2,11 @@
 
 int main()
 {
-    List <Values> list;  
-    int choice;
-    int temp1;
-    string temp2;
-    switch_istructions();
+    List <Values> list;  // Создание списка хранящего значения класса Values
+    int choice; // Переменная для работы со switch
+    int temp1; // Переменная для работы с данными типа int для ввода 
+    string temp2; // Переменная для работы с данными типа string для ввода
+    switch_istructions(); 
     do
     {
         cout << "Select: "; cin >> choice;
@@ -71,6 +71,6 @@ int main()
         }
     }
     while (choice != 0);
-    list.clear();
-    return 0;
+    list.clear(); // Очистка динамически выделенной памяти
+    return 0; // Завершение работы программы
 } 
