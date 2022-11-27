@@ -1,4 +1,3 @@
-#include "list.h"
 #include "list.cpp"
 
 int main()
