@@ -14,11 +14,6 @@ List <T> :: ~List()
 };
 
 template <typename T>
-int List <T> :: GetSize()
-{
-    return Size;
-}
-template <typename T>
 void List <T> :: push_back(T data)
 {
     if(head == nullptr)

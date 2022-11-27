@@ -1,7 +1,6 @@
 #ifndef LIST
 #define LIST
 
-#include <bits/stdc++.h>
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -67,7 +66,6 @@ class List
         void clear();
         void pop_front();
         void push_back(T data);
-        int GetSize();
     private:
         int Size;
         Node <T> *head;
